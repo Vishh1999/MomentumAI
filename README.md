@@ -1,9 +1,7 @@
 # MomentumAI
 
-MomentumAI is a small end-to-end machine learning project that demonstrates how workout data can be turned into actionable, post-workout coaching insights.  
-It combines traditional machine learning models with a lightweight LLM layer to generate user-facing feedback for a hybrid fitness application.
-
-The project is designed to reflect how an ML/AI Engineer would build a practical, product-oriented system.
+MomentumAI is an end-to-end ML + AI project that demonstrates how workout data can be turned into actionable, post workout coaching insights.  
+It combines traditional machine learning models with a lightweight LLM layer to generate user facing feedback for a hybrid fitness application.
 
 ---
 
@@ -18,10 +16,10 @@ The system works in three stages:
      - Whether the *training streak* is at risk of breaking.
 
 2. **Model Inference**
-   - The best-performing model (Logistic Regression) is saved and reused.
+   - The best performing model is saved and reused.
    - A user’s latest workout data is passed through the trained models to generate probabilities.
 
-3. **LLM-Based Coaching Output**
+3. **LLM Based Coaching Output**
    - Model outputs are converted into simple product signals.
    - An LLM generates short, post-workout coaching messages shown immediately after a session.
 
@@ -32,9 +30,9 @@ The LLM is used only for communication, not for prediction.
 
 Three classifiers were evaluated:
 
-- Logistic Regression (baseline and final production choice)
-- Random Forest
-- XGBoost
+- Logistic Regression (baseline)
+- Random Forest (Medium)
+- XGBoost (Advanced)
 
 Logistic Regression was selected for deployment because it performed slightly better on accuracy while remaining simple, interpretable, and stable.
 
@@ -44,12 +42,10 @@ Logistic Regression was selected for deployment because it performed slightly be
 
 The models use a small set of interpretable features:
 
-- Training load (distance × average speed)
+- Training load (distance * average speed)
 - Average heart rate
 - Moving time
 - Current workout streak length
-
-These features are derived directly from workout logs and do not rely on complex physiological assumptions.
 
 ---
 
