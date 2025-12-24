@@ -20,16 +20,13 @@ FEATURES = [
 # collected automatically from workout logs, wearables,
 # or backend services. For demo purposes, we simulate this
 # with manual user input.
-# print("\nEnter current user training details:\n")
-#
-# training_load = float(input("Training load: "))
-# avg_hr = float(input("Average heart rate: "))
-# moving_time = float(input("Moving time (minutes): "))
-# streak_length = int(input("Current streak length: "))
-training_load = 45
-avg_hr = 158
-moving_time = 55
-streak_length = 4
+
+print("\nEnter current user training details:\n")
+
+training_load = float(input("Training load: "))
+avg_hr = float(input("Average heart rate: "))
+moving_time = float(input("Moving time (minutes): "))
+streak_length = int(input("Current streak length: "))
 
 # Build feature vector
 X_user = pd.DataFrame([{
